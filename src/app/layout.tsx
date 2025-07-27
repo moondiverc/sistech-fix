@@ -27,28 +27,41 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
-        <header className="h-15 text-black flex px-4 items-center justify-between">
-          <Link href="./" className="flex items-center gap-x-2">
-            <Image
-              src="/image.png"
-              alt="Logo"
-              width={100}
-              height={100}
-            />
-          </Link>
-          <div className="flex gap-x-10 justify-center w-full font-bold text-lg">
-            <Link href="./">Home</Link>
-            <Link href="./products">Dashboard</Link>
-            <Link href="./contact">Features</Link>
-            <Link href="./contact">Community</Link>
-            <Link href="./contact">About Us</Link>
+        <header className="py-10 h-15 text-black flex px-4 items-center justify-center">
+          <div className="bg-white/10 border border-white rounded-2xl max-w-6xl w-full flex items-center justify-between">
+            <Link href="./" className="flex items-center gap-x-2">
+              <Image
+                src="/image.png"
+                alt="Logo"
+                width={100}
+                height={100}
+              />
+            </Link>
+            <div className="flex gap-x-10 justify-center w-full font-bold text-lg">
+              <Link href="./">Home</Link>
+              <Link href="./products">Dashboard</Link>
+              <Link href="./contact">Features</Link>
+              <Link href="./contact">Community</Link>
+              <Link href="./contact">About</Link>
+            </div>
+            <button>GetStarted!</button>
           </div>
         </header>
-        {children}        
+
+        <main className="flex-1">
+          {children}
+        </main>
+
+        <footer className="text-black w-full px-4 py-4">
+          <div className="border border-white rounded-2xl bg-white/10 max-w-6xl mx-auto py-4 flex items-center justify-between">
+            <p className="text-sm">© 2025 Your Company</p>
+            <div className="flex gap-x-4">
+            </div>
+          </div>
+        </footer>        
       </body>
     </html>
   );
 }
-{/* <Image src="/image.png" alt="" width={500} height={500} /> */}
