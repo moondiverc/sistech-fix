@@ -33,7 +33,7 @@ export default function RootLayout({
           <div className="bg-white/10 border border-white rounded-2xl max-w-6xl w-full flex items-center justify-between">
             <Link href="./" className="flex items-center gap-x-2">
               <Image
-                src="/image.png"
+                src="/logo-transparent.png"
                 alt="Logo"
                 width={100}
                 height={100}
