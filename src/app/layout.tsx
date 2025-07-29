@@ -41,10 +41,10 @@ export default function RootLayout({
             </Link>
             <div className="flex gap-x-10 justify-center w-full font-bold text-lg">
               <Link href="./">Home</Link>
-              <Link href="./products">Dashboard</Link>
-              <Link href="./contact">Features</Link>
-              <Link href="./contact">Community</Link>
-              <Link href="./contact">About</Link>
+              <Link href="./dashboard">Dashboard</Link>
+              <Link href="./features">Features</Link>
+              <Link href="./community">Community</Link>
+              <Link href="./about">About</Link>
             </div>
             <button>GetStarted!</button>
           </div>
