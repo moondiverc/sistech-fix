@@ -29,38 +29,63 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
-        <header className="py-10 h-15 text-black flex px-4 items-center justify-center">
-          <div className="bg-white/10 border border-white rounded-2xl max-w-6xl w-full flex items-center justify-between">
+        <header className="fixed top-0 left-0 right-0 py-15 h-15 text-black flex px-4 items-center justify-center">
+          <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-3xl max-w-7xl w-full flex items-center justify-between px-8 py-2">
             <Link href="./" className="flex items-center gap-x-2">
               <Image
                 src="/logo-transparent.png"
                 alt="Logo"
-                width={100}
-                height={100}
+                width={80}
+                height={80}
               />
             </Link>
-            <div className="flex gap-x-10 justify-center w-full font-bold text-lg">
-              <Link href="./">Home</Link>
-              <Link href="./dashboard">Dashboard</Link>
-              <Link href="./features">Features</Link>
-              <Link href="./community">Community</Link>
-              <Link href="./about">About</Link>
+            <div className="flex gap-x-8 justify-center font-bold text-gray-900 hover:text-gray-900">
+              <Link href="./" className="hover:text-blue-600 transition-colors">
+                Home
+              </Link>
+              <Link
+                href="./dashboard"
+                className="hover:text-blue-600 transition-colors"
+              >
+                Dashboard
+              </Link>
+              <Link
+                href="./Features"
+                className="hover:text-blue-600 transition-colors"
+              >
+                Features
+              </Link>
+              <Link
+                href="./community"
+                className="hover:text-blue-600 transition-colors"
+              >
+                Community
+              </Link>
+              <Link
+                href="./about"
+                className="hover:text-blue-600 transition-colors"
+              >
+                About
+              </Link>
             </div>
-            <button>GetStarted!</button>
+            <Link
+              href="./sign-in"
+              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-2 px-6 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              Get Started
+            </Link>
           </div>
         </header>
 
-        <main className="flex-1">
-          {children}
-        </main>
+        <main className="flex-1 pt-15">{children}</main>
 
+        {/* footer */}
         <footer className="text-black w-full px-4 py-4">
           <div className="border border-white rounded-2xl bg-white/10 max-w-6xl mx-auto py-4 flex items-center justify-between">
             <p className="text-sm">© 2025 Your Company</p>
-            <div className="flex gap-x-4">
-            </div>
+            <div className="flex gap-x-4"></div>
           </div>
-        </footer>        
+        </footer>
       </body>
     </html>
   );
