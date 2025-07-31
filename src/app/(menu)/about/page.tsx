@@ -3,7 +3,6 @@ import Image from "next/image";
 export default function About() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
       <section className="text-center py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl font-bold mb-6">
@@ -17,7 +16,7 @@ export default function About() {
             job options, outdated resources, and a lack of personalized support,
             career planning often feels overwhelming.
           </p>
-          <div className="bg-white/20 backdrop-blur-sm rounded-3xl p-6 inline-block">
+          <div className="backdrop-blur-sm rounded-3xl p-6 inline-block">
             <Image
               src="/landing-page.jpg"
               alt="About Us"
@@ -29,7 +28,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Mission & Vision Section */}
       <section className="py-20 px-4 bg-gradient-to-b from-blue-50/30 to-purple-50/30">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -57,7 +55,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* What We Do Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -147,7 +144,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* screen 4 */}
       <div>
         <h1 className="text-4xl font-bold text-center mt-20 text-black">
           🎯 Why FIX Matters
@@ -171,7 +167,6 @@ export default function About() {
         </ul>
       </div>
 
-      {/* Core Values Section */}
       <section className="py-20 px-4 bg-gradient-to-b from-blue-50/30 to-purple-50/30">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-black mb-6">
@@ -226,7 +221,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* screen 6 */}
       <div>
         <h1 className="text-4xl font-bold text-center mt-20 text-black">
           🎯 Why FIX Matters

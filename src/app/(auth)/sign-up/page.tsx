@@ -1,17 +1,14 @@
 export default function SignUp() {
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
+    <div className="min-h-screen flex items-center justify-center p-20">
       <div className="bg-white/20 backdrop-blur-sm rounded-3xl p-8 w-full max-w-md">
-        {/* Welcome Header */}
         <h1 className="text-5xl font-bold text-center mb-8">
           <span className="bg-gradient-to-r from-purple-500 via-blue-500 to-white bg-clip-text text-transparent">
             Welcome!
           </span>
         </h1>
 
-        {/* Form */}
         <form className="space-y-6">
-          {/* Name Field */}
           <div>
             <label className="block text-black font-semibold mb-2">
               Name *
@@ -23,7 +20,6 @@ export default function SignUp() {
             />
           </div>
 
-          {/* Email Field */}
           <div>
             <label className="block text-black font-semibold mb-2">
               Email Address *
@@ -35,7 +31,6 @@ export default function SignUp() {
             />
           </div>
 
-          {/* Password Field */}
           <div>
             <label className="block text-black font-semibold mb-2">
               Password *
@@ -47,7 +42,6 @@ export default function SignUp() {
             />
           </div>
 
-          {/* Confirm Password Field */}
           <div>
             <label className="block text-black font-semibold mb-2">
               Confirm Password *
@@ -59,7 +53,6 @@ export default function SignUp() {
             />
           </div>
 
-          {/* Referral Code Field */}
           <div>
             <label className="block text-black font-semibold mb-2">
               Referral Code (Optional)
@@ -71,7 +64,6 @@ export default function SignUp() {
             />
           </div>
 
-          {/* Terms and Conditions Checkbox */}
           <div className="flex items-start gap-3">
             <input
               type="checkbox"
@@ -84,7 +76,6 @@ export default function SignUp() {
             </label>
           </div>
 
-          {/* Register Button */}
           <button
             type="submit"
             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-xl transition duration-200"
@@ -92,14 +83,12 @@ export default function SignUp() {
             Register
           </button>
 
-          {/* Divider */}
           <div className="flex items-center my-6">
             <hr className="flex-1 border-gray-400" />
             <span className="px-4 text-gray-600">Or</span>
             <hr className="flex-1 border-gray-400" />
           </div>
 
-          {/* Continue with Google */}
           <button
             type="button"
             className="w-full bg-white hover:bg-gray-50 text-gray-700 font-semibold py-3 px-4 rounded-xl border border-gray-300 transition duration-200 flex items-center justify-center gap-3"
@@ -124,17 +113,6 @@ export default function SignUp() {
             </svg>
             Continue with Google
           </button>
-
-          {/* Sign In Link */}
-          <div className="text-center mt-6">
-            <span className="text-black">Not Have Account? </span>
-            <a
-              href="/sign-in"
-              className="text-blue-600 hover:text-blue-800 font-semibold"
-            >
-              Sign In Now
-            </a>
-          </div>
         </form>
       </div>
     </div>

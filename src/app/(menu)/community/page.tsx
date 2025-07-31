@@ -2,7 +2,6 @@ export default function Community() {
   return (
     <div className="min-h-screen py-20 px-4">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <h1 className="text-5xl font-bold text-center mb-12">
           <span className="bg-gradient-to-r from-purple-500 via-blue-500 to-purple-600 bg-clip-text text-transparent">
             COMMUNITY FORUM
@@ -10,7 +9,6 @@ export default function Community() {
         </h1>
 
         <div className="flex gap-8">
-          {/* Sidebar */}
           <div className="w-64 flex-shrink-0">
             <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-3xl p-6">
               <div className="flex flex-col gap-3">
@@ -27,16 +25,13 @@ export default function Community() {
             </div>
           </div>
 
-          {/* Main Content */}
           <div className="flex-1">
             <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-3xl p-8">
-              {/* Thread Header */}
               <div className="flex justify-between items-center mb-6">
                 <h2 className="text-xl font-semibold text-gray-800">Thread</h2>
                 <button className="text-gray-500 hover:text-gray-700">⋯</button>
               </div>
 
-              {/* Main Thread */}
               <div className="bg-white/30 backdrop-blur-sm border border-white/30 rounded-2xl p-6 mb-6">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-400 to-blue-400 flex items-center justify-center text-white font-semibold">
@@ -79,7 +74,6 @@ export default function Community() {
                 </div>
               </div>
 
-              {/* Replies Header */}
               <div className="flex justify-between items-center mb-4">
                 <span className="font-medium text-gray-700">replies</span>
                 <span className="text-blue-500 text-sm">
@@ -87,7 +81,6 @@ export default function Community() {
                 </span>
               </div>
 
-              {/* Reply 1 */}
               <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-2xl p-4 mb-4">
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 rounded-full bg-gradient-to-br from-green-400 to-blue-400 flex items-center justify-center text-white text-sm font-semibold">
@@ -114,7 +107,6 @@ export default function Community() {
                 </div>
               </div>
 
-              {/* Reply 2 */}
               <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-2xl p-4 mb-4">
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-400 to-blue-400 flex items-center justify-center text-white text-sm font-semibold">
@@ -140,7 +132,6 @@ export default function Community() {
                 </div>
               </div>
 
-              {/* More Replies */}
               <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-2xl p-4 mb-4">
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 rounded-full bg-gradient-to-br from-orange-400 to-red-400 flex items-center justify-center text-white text-sm font-semibold">

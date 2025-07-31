@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
+      {/* landing page */}
       <section className="text-center py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl font-bold mb-6">
@@ -24,7 +24,7 @@ export default function Home() {
               Learn More
             </button>
           </div>
-          <div className="bg-white/20 backdrop-blur-sm rounded-3xl p-6 inline-block">
+          <div className="backdrop-blur-sm rounded-3xl p-6 inline-block">
             <Image
               src="/landing-page.jpg"
               alt="Landing Page Preview"
@@ -36,7 +36,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Dashboard Preview Section */}
       <section className="py-20 px-4 bg-gradient-to-b from-blue-50/30 to-purple-50/30">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-black mb-6">
@@ -46,7 +45,7 @@ export default function Home() {
             Track your progress, visualize your career path, and get
             personalized recommendations all in one place.
           </p>
-          <div className="bg-white/20 backdrop-blur-sm rounded-3xl p-8 mb-8">
+          <div className=" backdrop-blur-sm rounded-3xl p-8 mb-8">
             <Image
               src="/dashboard1.png"
               alt="Dashboard Preview"
@@ -66,7 +65,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-black mb-6">
@@ -154,7 +152,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
       <section className="py-20 px-4 bg-gradient-to-b from-purple-50/30 to-blue-50/30">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-black mb-6">
@@ -196,7 +193,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-black mb-6">
