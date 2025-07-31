@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Rubik } from "next/font/google";
+
 import "./globals.css";
-import Image from "next/image";
-import Link from "next/link";
+import ConditionalNavbar from "../components/ConditionalNavbar"; // baru
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+});
+
+const rubik = Rubik({
+  subsets: ["latin"],
+  weight: ["700"],
+  variable: "--font-rubik",
 });
 
 const geistMono = Geist_Mono({
@@ -27,8 +34,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
+        className={`font-rubik ${geistSans.variable} ${geistMono.variable} ${rubik.variable} antialiased flex flex-col min-h-screen`}
       >
+<<<<<<< HEAD
         <header className="fixed top-0 left-0 right-0 py-15 h-15 text-black flex px-4 items-center justify-center">
           <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-3xl max-w-7xl w-full flex items-center justify-between px-8 py-2">
             <Link href="./" className="flex items-center gap-x-2">
@@ -86,6 +94,10 @@ export default function RootLayout({
             <div className="flex gap-x-4"></div>
           </div>
         </footer>
+=======
+        <ConditionalNavbar />
+        <main className="flex-1">{children}</main>
+>>>>>>> fitur-dashboard
       </body>
     </html>
   );
