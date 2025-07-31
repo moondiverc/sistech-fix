@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Rubik } from "next/font/google";
+
 import "./globals.css";
-import Image from "next/image";
-import Link from "next/link";
+import ConditionalNavbar from "../components/ConditionalNavbar"; // baru
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+});
+
+const rubik = Rubik({
+  subsets: ["latin"],
+  weight: ["700"],
+  variable: "--font-rubik",
 });
 
 const geistMono = Geist_Mono({
@@ -27,40 +34,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
+        className={`font-rubik ${geistSans.variable} ${geistMono.variable} ${rubik.variable} antialiased flex flex-col min-h-screen`}
       >
-        <header className="py-10 h-15 text-black flex px-4 items-center justify-center">
-          <div className="bg-white/10 border border-white rounded-2xl max-w-6xl w-full flex items-center justify-between">
-            <Link href="./" className="flex items-center gap-x-2">
-              <Image
-                src="/logo-transparent.png"
-                alt="Logo"
-                width={100}
-                height={100}
-              />
-            </Link>
-            <div className="flex gap-x-10 justify-center w-full font-bold text-lg">
-              <Link href="./">Home</Link>
-              <Link href="./dashboard">Dashboard</Link>
-              <Link href="./features">Features</Link>
-              <Link href="./community">Community</Link>
-              <Link href="./about">About</Link>
-            </div>
-            <button>GetStarted!</button>
-          </div>
-        </header>
-
-        <main className="flex-1">
-          {children}
-        </main>
-
-        <footer className="text-black w-full px-4 py-4">
-          <div className="border border-white rounded-2xl bg-white/10 max-w-6xl mx-auto py-4 flex items-center justify-between">
-            <p className="text-sm">© 2025 Your Company</p>
-            <div className="flex gap-x-4">
-            </div>
-          </div>
-        </footer>        
+        <ConditionalNavbar />
+        <main className="flex-1">{children}</main>
       </body>
     </html>
   );
