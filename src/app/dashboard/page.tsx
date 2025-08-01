@@ -32,6 +32,7 @@ export default function Dashboard() {
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
+        paddingTop: "80px",
       }}
     >
       <div

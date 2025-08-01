@@ -1,8 +1,22 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Rubik } from "next/font/google";
+
+const rubik = Rubik({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
+
 import "./globals.css";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  FaFacebookF,
+  FaXTwitter,
+  FaYoutube,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa6";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -79,26 +93,87 @@ export default function RootLayout({
             </Link>
           </div>
         </header>
-
         <main className="flex-1 pt-15">{children}</main>
-
-        {/* footer */}
-        <footer className="text-black w-full px-4">
-          <div className="border border-white rounded-2xl bg-white/10 max-w-6xl mx-auto flex items-center justify-between">
-            <div className="flex items-center gap-x-3">
+        {/* Footer (disamakan dengan dashboard) */}
+        <div
+          style={{
+            marginTop: "-200px",
+          }}
+        >
+          <footer
+            style={{
+              width: "1280px", // sesuai desain
+              height: "87px",
+              borderRadius: "30px",
+              padding: "10px 15px",
+              margin: "60px auto 0 auto", // CENTER SECARA HORIZONTAL
+              background: "#FFFFFF40",
+              backdropFilter: "blur(14px)",
+              WebkitBackdropFilter: "blur(14px)",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              opacity: 1,
+            }}
+          >
+            {/* Kiri: Logo + Teks */}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "10px",
+                whiteSpace: "nowrap", // <-- Tambahan penting agar teks tidak turun
+              }}
+            >
               <Image
                 src="/logo-transparent.png"
                 alt="Logo"
-                width={100}
-                height={100}
+                width={150}
+                height={150}
+                style={{ objectFit: "contain" }}
               />
-              <p className="text-lg font-bold">
-                © 2025 FIX. All Rights Reserved
+              <p
+                className={rubik.className}
+                style={{
+                  fontWeight: 500,
+                  fontSize: "20px",
+                  lineHeight: "140%",
+                  letterSpacing: "0px",
+                  color: "#111827",
+                  opacity: 1,
+                }}
+              >
+                © 2025 FIX. All rights reserved.
               </p>
             </div>
-            <div className="flex gap-x-4">{/* Social media icons space */}</div>
-          </div>
-        </footer>
+
+            {/* Kanan: Sosmed */}
+            <div
+              style={{
+                width: "264px",
+                height: "32.6px",
+                display: "flex",
+                gap: "27px",
+                alignItems: "center",
+                justifyContent: "flex-end",
+              }}
+            >
+              <FaFacebookF
+                style={{ width: 28, height: 28, cursor: "pointer" }}
+              />
+              <FaXTwitter
+                style={{ width: 28, height: 28, cursor: "pointer" }}
+              />
+              <FaYoutube style={{ width: 28, height: 28, cursor: "pointer" }} />
+              <FaInstagram
+                style={{ width: 28, height: 28, cursor: "pointer" }}
+              />
+              <FaLinkedinIn
+                style={{ width: 28, height: 28, cursor: "pointer" }}
+              />
+            </div>
+          </footer>
+        </div>
       </body>
     </html>
   );

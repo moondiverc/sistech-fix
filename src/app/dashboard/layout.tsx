@@ -24,8 +24,10 @@ export default function DashboardLayout({
       {/* Navbar */}
       <div
         style={{
-          position: "sticky",
+          position: "fixed",
           top: 0,
+          left: 0,
+          right: 0,
           zIndex: 50,
           background: "transparent",
         }}
@@ -33,7 +35,9 @@ export default function DashboardLayout({
         <nav
           style={{
             width: scrolled ? "100%" : "1320px",
-            margin: scrolled ? "0" : "27px auto",
+            marginTop: scrolled ? "0px" : "30px",
+            marginLeft: "auto",
+            marginRight: "auto",
             padding: "10px 15px",
             borderRadius: scrolled ? "0px" : "30px",
             background: "#FFFFFF40",
@@ -96,9 +100,9 @@ export default function DashboardLayout({
                   name: "Training & Sertification",
                   href: "/dashboard#training",
                 },
-                { name: "CV Analyze", href: "/dashboard#cv-analyze" },
+                { name: "CV Analyze", href: "/cv-analyze" },
                 { name: "Mentor", href: "/dashboard#mentor" },
-                { name: "Community", href: "/dashboard#community" },
+                { name: "Community", href: "/community" },
               ].map((item, idx) => (
                 <Link
                   key={idx}
@@ -120,7 +124,8 @@ export default function DashboardLayout({
             </div>
 
             {/* Button Setting */}
-            <button
+            <Link
+              href="/setting"
               style={{
                 padding: "10px",
                 width: "106px",
@@ -137,18 +142,30 @@ export default function DashboardLayout({
                 backgroundImage:
                   "linear-gradient(91.31deg, #3B82F6 27.23%, #818CF8 51.33%, #D8B4FE 75.42%)",
                 cursor: "pointer",
+                textDecoration: "none",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
             >
               Setting
-            </button>
+            </Link>
           </div>
         </nav>
       </div>
 
-      {/* Konten Halaman */}
-      <main>{children}</main>
+      {/* Main content + Footer dibungkus agar footer naik */}
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          minHeight: "100vh",
+        }}
+      >
+        <main style={{ marginTop: "10px", flex: "1" }}>{children}</main>
 
-      {/* Footer langsung di layout */}
+        {/* Footer */}
+      </div>
     </>
   );
 }
