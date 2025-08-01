@@ -182,7 +182,7 @@ export default function Home() {
             career path with personalized guidance.
           </p>
           <div className="bg-white/20 backdrop-blur-sm rounded-3xl p-8 inline-block">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-12 rounded-xl transition duration-200 text-lg mb-4">
+            <button className="bg-white/50 hover:bg-blue-700 text-white font-semibold py-4 px-12 rounded-xl transition duration-200 text-lg mb-4">
               Sign Up Free
             </button>
             <p className="text-gray-700">
