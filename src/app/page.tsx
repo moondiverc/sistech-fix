@@ -177,12 +177,12 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-black mb-6">
             Start Your Career Journey with FIX
           </h2>
-          <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-black mb-8 max-w-3xl mx-auto">
             Join thousands of professionals who are taking control of their
             career path with personalized guidance.
           </p>
-          <div className="bg-white/20 backdrop-blur-sm rounded-3xl p-8 inline-block">
-            <button className="bg-white/50 hover:bg-blue-700 text-white font-semibold py-4 px-12 rounded-xl transition duration-200 text-lg mb-4">
+          <div className="backdrop-blur-sm rounded-3xl p-8 inline-block">
+            <button className="bg-white/50 text-white font-semibold py-4 px-12 rounded-xl transition duration-200 text-lg mb-4">
               Sign Up Free
             </button>
             <p className="text-gray-700">

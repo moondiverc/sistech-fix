@@ -83,10 +83,20 @@ export default function RootLayout({
         <main className="flex-1 pt-15">{children}</main>
 
         {/* footer */}
-        <footer className="text-black w-full px-4 py-4">
-          <div className="border border-white rounded-2xl bg-white/10 max-w-6xl mx-auto py-4 flex items-center justify-between">
-            <p className="text-sm">© 2025 Your Company</p>
-            <div className="flex gap-x-4"></div>
+        <footer className="text-black w-full px-4">
+          <div className="border border-white rounded-2xl bg-white/10 max-w-6xl mx-auto flex items-center justify-between">
+            <div className="flex items-center gap-x-3">
+              <Image
+                src="/logo-transparent.png"
+                alt="Logo"
+                width={100}
+                height={100}
+              />
+              <p className="text-lg font-bold">
+                © 2025 FIX. All Rights Reserved
+              </p>
+            </div>
+            <div className="flex gap-x-4">{/* Social media icons space */}</div>
           </div>
         </footer>
       </body>
